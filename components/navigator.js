@@ -1,20 +1,23 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import Home from './home';
 import Nonuserparty from './nonuserparty';
 import Nologinpage from './nologinpage';
+import userrouter from './userrouter';
+import nologinpage from './nologinpage';
 
 const Tab = createBottomTabNavigator();
 
 const Navigator = () => {
   return (   
-    <NavigationContainer>
+   
     <Tab.Navigator 
         tabBarOptions={{
             style:{
-                height: '8%'
+                height: '8%',
+                borderTopLeftRadius: 30,
+                borderTopRightRadius: 30,
             }
         }}
     >
@@ -56,7 +59,7 @@ const Navigator = () => {
     />
     <Tab.Screen 
         name="User" 
-        component={Nologinpage} 
+        component={nologinpage} 
         options={{
             tabBarIcon: ({focused}) => (
                 <View>
@@ -75,7 +78,7 @@ const Navigator = () => {
     />
 
     </Tab.Navigator>
-    </NavigationContainer>
+    
   )
 }
 

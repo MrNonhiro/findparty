@@ -12,10 +12,9 @@ const Promotion = () => {
 
   const styles = StyleSheet.create({
     container: {
-        height: 110,
+        height: 150,
         padding: 5,
         borderColor: 'black'
-        
     },
     pomo:{
       width: '100%',

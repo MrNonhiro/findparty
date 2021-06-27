@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Button, Alert, } from 'react-native'
-import { NativeRouter, Route, Link } from "react-router-native";
 
-const nologinpage = () => {
+const nologinpage = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.box}>
@@ -14,7 +13,7 @@ const nologinpage = () => {
 
             <Button color="green" style={{fontSize: 20, borderRadius:10, backgroundColor : "gree", }}
                 title="คลิกเพื่อสมัครสมาชิก"
-                onPress={() => Alert.alert('ไปยังหน้าสมัครสมาชิก')}>
+                onPress={() => navigation.navigate('register')}>
            </Button>
 
             </View>
